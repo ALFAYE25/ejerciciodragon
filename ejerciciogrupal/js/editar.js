@@ -1,4 +1,5 @@
 import{estudiantes_Funval} from "./jaime.js";
+import { desplegarDatos } from "./jaime2";
 
 export function editarEstudiante(index) {
   let est = estudiantes_Funval[index];
@@ -21,7 +22,7 @@ export function editarEstudiante(index) {
     est.pais = nuevoPais.trim() || est.pais;
     est.nota = parseFloat(nuevaNota) || est.nota;
 
-    mostrarTabla();
+    desplegarDatos();
     alert("Estudiante actualizado correctamente");
   }
 }
